@@ -43,7 +43,9 @@
     "noPhone": "Not provided",
     "noEmail": "Not provided",
     "noProfession": "Not provided",
-    "noBloodType": "Not provided"
+    "noBloodType": "Not provided",
+    "siblings": "Siblings",
+    "contact": "Contact"
   },
   "relationship": {
     "biological": "Biological",

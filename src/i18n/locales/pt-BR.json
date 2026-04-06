@@ -43,7 +43,9 @@
     "noPhone": "Não informado",
     "noEmail": "Não informado",
     "noProfession": "Não informada",
-    "noBloodType": "Não informado"
+    "noBloodType": "Não informado",
+    "siblings": "Irmãos",
+    "contact": "Contato"
   },
   "relationship": {
     "biological": "Biológico(a)",

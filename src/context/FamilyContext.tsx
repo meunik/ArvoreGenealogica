@@ -12,6 +12,7 @@ interface FamilyContextValue {
   getChildrenOf: (personUuid: string) => Person[];
   getParentsOf: (personUuid: string) => Array<{ person: Person; type: ParentalRelationship['type'] }>;
   getSpousesOf: (personUuid: string) => Array<{ person: Person; relationship: ConjugalRelationship }>;
+  getSiblingsOf: (personUuid: string) => Person[];
 }
 
 const FamilyContext = createContext<FamilyContextValue | null>(null);
@@ -55,6 +56,28 @@ export function FamilyProvider({ children }: { children: React.ReactNode }) {
       .filter((r): r is { person: Person; relationship: ConjugalRelationship } => r.person !== undefined);
   };
 
+  const getSiblingsOf = (personUuid: string): Person[] => {
+    // Collect all parent UUIDs of this person
+    const parentUuids = new Set(
+      familyData.parentalRelationships
+        .filter(pr => pr.childUuid === personUuid)
+        .map(pr => pr.parentUuid),
+    );
+    if (parentUuids.size === 0) return [];
+
+    // Collect UUIDs of everyone who shares at least one parent
+    const siblingUuids = new Set<string>();
+    for (const pr of familyData.parentalRelationships) {
+      if (parentUuids.has(pr.parentUuid) && pr.childUuid !== personUuid) {
+        siblingUuids.add(pr.childUuid);
+      }
+    }
+
+    return Array.from(siblingUuids)
+      .map(uuid => personMap.get(uuid))
+      .filter((p): p is Person => p !== undefined);
+  };
+
   const value: FamilyContextValue = {
     persons: familyData.persons,
     conjugalRelationships: familyData.conjugalRelationships,
@@ -63,6 +86,7 @@ export function FamilyProvider({ children }: { children: React.ReactNode }) {
     getChildrenOf,
     getParentsOf,
     getSpousesOf,
+    getSiblingsOf,
   };
 
   return <FamilyContext.Provider value={value}>{children}</FamilyContext.Provider>;

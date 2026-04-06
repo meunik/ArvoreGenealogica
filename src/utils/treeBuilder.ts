@@ -145,12 +145,17 @@ export function buildFamilyGraph(data: FamilyData): { nodes: FamilyNode[]; edges
       );
       const isAdoptive = relForThisCouple.every(r => r.type === 'adoptive' || r.type === 'foster' || r.type === 'stepparent');
 
+      const childOrder = data.conjugalRelationships.find(
+        cr => cr.uuid === pr.conjugalRelationshipUuid
+      )?.childOrder;
+      const layoutOrder = childOrder ? childOrder.indexOf(pr.childUuid) : undefined;
+
       edges.push({
         id: `e-c-${pr.conjugalRelationshipUuid}-${pr.childUuid}`,
         source: `c-${pr.conjugalRelationshipUuid}`,
         target: `p-${pr.childUuid}`,
         type: isAdoptive ? 'adoptiveParentalEdge' : 'bloodParentalEdge',
-        data: { type: pr.type },
+        data: { type: pr.type, ...(layoutOrder !== undefined ? { layoutOrder } : {}) },
       });
     } else {
       // No couple node — direct parent → child edge

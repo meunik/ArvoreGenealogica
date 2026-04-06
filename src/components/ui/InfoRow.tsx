@@ -17,7 +17,7 @@ export function InfoRow({ label, value, fallback = '—', icon }: InfoRowProps) 
           {label}
         </p>
         <p
-          className={`text-sm break-words ${isEmpty ? 'text-text-muted italic' : 'text-text-primary'}`}
+          className={`text-sm wrap-break-word ${isEmpty ? 'text-text-muted italic' : 'text-text-primary'}`}
         >
           {display}
         </p>

@@ -50,6 +50,8 @@ export interface ConjugalRelationship {
   relationshipType: ConjugalType;
   startDate?: string;
   endDate?: string;
+  /** Optional left-to-right ordering of children in the tree layout */
+  childOrder?: string[];
 }
 
 export interface ParentalRelationship {

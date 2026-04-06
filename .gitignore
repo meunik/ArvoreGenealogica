@@ -23,3 +23,6 @@ doc
 *.njsproj
 *.sln
 *.sw?
+
+.env
+deploy.js

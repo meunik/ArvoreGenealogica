@@ -6,10 +6,7 @@ interface AppLayoutProps {
 
 export function AppLayout({ children }: AppLayoutProps) {
   return (
-    <div
-      className="flex flex-col h-full"
-      style={{ backgroundColor: 'var(--surface)' }}
-    >
+    <div className="flex flex-col h-full bg-surface">
       <Header />
       <main className="flex-1 overflow-hidden relative">
         {children}

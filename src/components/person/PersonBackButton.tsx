@@ -8,8 +8,7 @@ export function PersonBackButton() {
 
   return (
     <div
-      className="sticky top-0 z-10 px-4 md:px-8 py-3 border-b flex items-center gap-3"
-      style={{ backgroundColor: 'var(--surface-card)', borderColor: 'var(--border)' }}
+      className="sticky top-0 z-10 px-4 md:px-8 py-3 border-b border-border flex items-center gap-3 bg-surface-card"
     >
       <Button variant="ghost" size="sm" onClick={() => navigate('/')}>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">

@@ -69,9 +69,9 @@ html.light {
   --color-surface-overlay:  var(--surface-overlay);
   --color-border:           var(--border);
   --color-border-subtle:    var(--border-subtle);
-  --color-text-primary:     var(--text-primary);
-  --color-text-secondary:   var(--text-secondary);
-  --color-text-muted:       var(--text-muted);
+  --color-primary:          var(--text-primary);
+  --color-secondary:        var(--text-secondary);
+  --color-muted:            var(--text-muted);
   --color-accent:           var(--accent);
   --color-accent-hover:     var(--accent-hover);
   --color-accent-subtle:    var(--accent-subtle);
@@ -87,6 +87,13 @@ html.light {
   --color-edge-adoptive:    var(--edge-adoptive);
   --color-edge-marriage:    var(--edge-marriage);
   --color-edge-divorce:     var(--edge-divorce);
+  --shadow-node:            0 2px 12px var(--node-shadow);
+  --shadow-node-hover:      0 4px 20px var(--node-shadow);
+  --shadow-node-lg:         0 0 32px var(--node-shadow);
+  --shadow-node-sm:         0 0 20px var(--node-shadow);
+  --shadow-couple:          0 0 8px var(--node-shadow);
+  --shadow-logo:            0 0 12px var(--node-shadow);
+  --shadow-panel:           -4px 0 40px rgba(0,0,0,0.5);
 }
 
 /* ─── Base ──────────────────────────────────────────────────── */

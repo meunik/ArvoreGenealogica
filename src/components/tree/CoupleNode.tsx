@@ -24,21 +24,10 @@ export function CoupleNode({ data }: CoupleNodeProps) {
         <div
           onClick={handleClick}
           title={canCollapse ? (isCollapsed ? 'Expandir filhos' : 'Recolher filhos') : undefined}
-          style={{
-            width: 10,
-            height: 10,
-            borderRadius: '50%',
-            backgroundColor: isCollapsed ? 'var(--text-muted)' : 'var(--border)',
-            border: '1.5px solid var(--text-muted)',
-            cursor: canCollapse ? 'pointer' : 'default',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            transition: 'background-color 0.15s',
-          }}
+          className={`w-2.5 h-2.5 rounded-full border-[1.5px] border-muted flex items-center justify-center transition-colors duration-150 ${canCollapse ? 'cursor-pointer' : 'cursor-default'} ${isCollapsed ? 'bg-muted' : 'bg-border'}`}
         >
           {canCollapse && (
-            <span style={{ fontSize: 7, color: 'var(--text-primary)', lineHeight: 1, fontWeight: 700 }}>
+            <span className="text-[7px] leading-none font-bold text-primary">
               {isCollapsed ? '+' : '−'}
             </span>
           )}
@@ -54,24 +43,10 @@ export function CoupleNode({ data }: CoupleNodeProps) {
       <div
         onClick={handleClick}
         title={canCollapse ? (isCollapsed ? 'Expandir filhos' : 'Recolher filhos') : undefined}
-        style={{
-          width: 14,
-          height: 14,
-          borderRadius: '50%',
-          backgroundColor: isCollapsed ? 'var(--accent-hover)' : 'var(--accent)',
-          border: '2px solid var(--accent-hover)',
-          boxShadow: '0 0 8px var(--node-shadow)',
-          cursor: canCollapse ? 'pointer' : 'default',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          transition: 'background-color 0.15s, transform 0.15s',
-        }}
-        onMouseEnter={e => { if (canCollapse) (e.currentTarget as HTMLDivElement).style.transform = 'scale(1.2)'; }}
-        onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = 'scale(1)'; }}
+        className={`w-3.5 h-3.5 rounded-full border-2 border-accent-hover shadow-couple flex items-center justify-center transition-all duration-150 ${canCollapse ? 'cursor-pointer hover:scale-[1.2]' : 'cursor-default'} ${isCollapsed ? 'bg-accent-hover' : 'bg-accent'}`}
       >
         {canCollapse && (
-          <span style={{ fontSize: 8, color: '#fff', lineHeight: 1, fontWeight: 700 }}>
+          <span className="text-[8px] leading-none font-bold text-white">
             {isCollapsed ? '+' : '−'}
           </span>
         )}

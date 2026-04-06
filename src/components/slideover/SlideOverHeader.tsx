@@ -14,27 +14,23 @@ export function SlideOverHeader({ person }: SlideOverHeaderProps) {
   const isDeceased = !!person.deathDate;
 
   return (
-    <div className="px-5 pt-5 pb-4 border-b" style={{ borderColor: 'var(--border)' }}>
+    <div className="px-5 pt-5 pb-4 border-b border-border">
       <div className="flex items-start gap-4">
         <div
-          className="rounded-2xl overflow-hidden shrink-0"
-          style={{
-            border: `3px solid ${isDeceased ? 'var(--text-muted)' : 'var(--accent)'}`,
-            boxShadow: '0 0 20px var(--node-shadow)',
-          }}
+          className={`rounded-2xl overflow-hidden shrink-0 border-[3px] shadow-node-sm ${isDeceased ? 'border-muted' : 'border-accent'}`}
         >
           <PersonAvatar person={person} size={72} />
         </div>
 
         <div className="flex-1 min-w-0 pt-1">
-          <h2 className="text-lg font-bold leading-tight" style={{ color: 'var(--text-primary)' }}>
+          <h2 className="text-lg font-bold leading-tight text-primary">
             {person.firstName}
           </h2>
-          <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
+          <p className="text-sm text-secondary">
             {person.lastName}
           </p>
           {age !== null && (
-            <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>
+            <p className="text-xs mt-1 text-muted">
               {age} {t('person.age').toLowerCase()}
               {isDeceased && (
                 <span className="ml-2">

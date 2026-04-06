@@ -15,27 +15,22 @@ export function PersonHeroCard({ person }: PersonHeroCardProps) {
 
   return (
     <div
-      className="rounded-2xl p-6 md:p-8 flex flex-col sm:flex-row items-center sm:items-start gap-6"
-      style={{ backgroundColor: 'var(--surface-card)', border: '1px solid var(--border)' }}
+      className="rounded-2xl p-6 md:p-8 flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-surface-card border border-border"
     >
       <div
-        className="rounded-3xl overflow-hidden shrink-0"
-        style={{
-          border: `4px solid ${isDeceased ? 'var(--text-muted)' : 'var(--accent)'}`,
-          boxShadow: '0 0 32px var(--node-shadow)',
-        }}
+        className={`rounded-3xl overflow-hidden shrink-0 border-4 shadow-node-lg ${isDeceased ? 'border-muted' : 'border-accent'}`}
       >
         <PersonAvatar person={person} size={120} />
       </div>
 
       <div className="flex-1 text-center sm:text-left">
-        <h1 className="text-3xl font-bold" style={{ color: 'var(--text-primary)' }}>
+        <h1 className="text-3xl font-bold text-primary">
           {person.firstName}{' '}
-          <span style={{ color: 'var(--text-secondary)' }}>{person.lastName}</span>
+          <span className="text-secondary">{person.lastName}</span>
         </h1>
 
         {age !== null && (
-          <p className="text-lg mt-1" style={{ color: 'var(--text-muted)' }}>
+          <p className="text-lg mt-1 text-muted">
             {age} {t('person.age').toLowerCase()}
           </p>
         )}

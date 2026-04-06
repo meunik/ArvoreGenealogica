@@ -17,20 +17,16 @@ export function PersonPage() {
 
   if (!person) {
     return (
-      <div
-        className="min-h-screen flex flex-col items-center justify-center gap-4"
-        style={{ backgroundColor: 'var(--surface)' }}
-      >
+      <div className="min-h-screen flex flex-col items-center justify-center gap-4 bg-surface">
         <div
-          className="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl"
-          style={{ backgroundColor: 'var(--surface-elevated)' }}
+          className="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl bg-surface-elevated"
         >
           🔍
         </div>
-        <h1 className="text-xl font-bold" style={{ color: 'var(--text-primary)' }}>
+        <h1 className="text-xl font-bold text-primary">
           {t('errors.personNotFound')}
         </h1>
-        <p style={{ color: 'var(--text-muted)' }}>{t('errors.personNotFoundDesc')}</p>
+        <p className="text-muted">{t('errors.personNotFoundDesc')}</p>
         <Button variant="outline" onClick={() => navigate('/')}>
           ← {t('person.backToTree')}
         </Button>
@@ -39,7 +35,7 @@ export function PersonPage() {
   }
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: 'var(--surface)' }}>
+    <div className="min-h-screen bg-surface">
       <PersonBackButton />
       <div className="max-w-3xl mx-auto px-4 md:px-8 py-8 space-y-8">
         <PersonHeroCard person={person} />

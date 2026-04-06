@@ -30,7 +30,7 @@ export function SlideOverRelationships({ personUuid }: SlideOverRelationshipsPro
     <>
       {spouses.length > 0 && (
         <section>
-          <h3 className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: 'var(--text-muted)' }}>
+          <h3 className="text-xs font-semibold uppercase tracking-wider mb-2 text-muted">
             {t('person.relationships')}
           </h3>
           <div className="space-y-2">
@@ -39,15 +39,14 @@ export function SlideOverRelationships({ personUuid }: SlideOverRelationshipsPro
               return (
                 <div
                   key={relationship.uuid}
-                  className="flex items-center gap-3 p-2 rounded-xl"
-                  style={{ backgroundColor: 'var(--surface-elevated)' }}
+                  className="flex items-center gap-3 p-2 rounded-xl bg-surface-elevated"
                 >
                   <PersonAvatar person={spouse} size={32} />
                   <div className="flex-1 min-w-0">
-                    <p className="text-sm font-medium truncate" style={{ color: 'var(--text-primary)' }}>
+                    <p className="text-sm font-medium truncate text-primary">
                       {getDisplayName(spouse)}
                     </p>
-                    <p className="text-[10px]" style={{ color: 'var(--text-muted)' }}>
+                    <p className="text-[10px] text-muted">
                       {t(`relationship.${relationship.status}`)}
                     </p>
                   </div>
@@ -63,19 +62,18 @@ export function SlideOverRelationships({ personUuid }: SlideOverRelationshipsPro
 
       {parents.length > 0 && (
         <section>
-          <h3 className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: 'var(--text-muted)' }}>
+          <h3 className="text-xs font-semibold uppercase tracking-wider mb-2 text-muted">
             {t('person.parents')}
           </h3>
           <div className="space-y-2">
             {parents.map(({ person: parent, type }) => (
               <div
                 key={parent.uuid}
-                className="flex items-center gap-3 p-2 rounded-xl"
-                style={{ backgroundColor: 'var(--surface-elevated)' }}
+                className="flex items-center gap-3 p-2 rounded-xl bg-surface-elevated"
               >
                 <PersonAvatar person={parent} size={32} />
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium truncate" style={{ color: 'var(--text-primary)' }}>
+                  <p className="text-sm font-medium truncate text-primary">
                     {getDisplayName(parent)}
                   </p>
                 </div>
@@ -90,7 +88,7 @@ export function SlideOverRelationships({ personUuid }: SlideOverRelationshipsPro
 
       {siblings.length > 0 && (
         <section>
-          <h3 className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: 'var(--text-muted)' }}>
+          <h3 className="text-xs font-semibold uppercase tracking-wider mb-2 text-muted">
             {t('person.siblings')} ({siblings.length})
           </h3>
           <div className="flex flex-wrap gap-2">
@@ -100,11 +98,11 @@ export function SlideOverRelationships({ personUuid }: SlideOverRelationshipsPro
       )}
 
       <section>
-        <h3 className="text-xs text-text-muted font-semibold uppercase tracking-wider mb-2">
+        <h3 className="text-xs text-muted font-semibold uppercase tracking-wider mb-2">
           {t('person.children')} ({children.length})
         </h3>
         {children.length === 0 ? (
-          <p className="text-sm text-text-muted italic">
+          <p className="text-sm text-muted italic">
             {t('person.noChildren')}
           </p>
         ) : (

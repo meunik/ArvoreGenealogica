@@ -10,12 +10,11 @@ export function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="w-9 h-9 rounded-xl flex items-center justify-center
+      className="w-9 h-9 rounded-xl flex items-center justify-center text-muted
                  transition-all duration-150 hover:bg-surface-elevated active:scale-95
                  border border-border hover:border-accent"
       title={isDark ? t('theme.toggleLight') : t('theme.toggleDark')}
       aria-label={isDark ? t('theme.toggleLight') : t('theme.toggleDark')}
-      style={{ color: 'var(--text-muted)' }}
     >
       {isDark ? (
         /* Sun icon */

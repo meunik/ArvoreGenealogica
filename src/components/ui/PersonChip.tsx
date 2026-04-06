@@ -8,11 +8,10 @@ interface PersonChipProps {
 export function PersonChip({ person }: PersonChipProps) {
   return (
     <div
-      className="flex items-center gap-2 px-2.5 py-1.5 rounded-xl"
-      style={{ backgroundColor: 'var(--surface-elevated)' }}
+      className="flex items-center gap-2 px-2.5 py-1.5 rounded-xl bg-surface-elevated"
     >
       <PersonAvatar person={person} size={24} />
-      <span className="text-xs font-medium" style={{ color: 'var(--text-secondary)' }}>
+      <span className="text-xs font-medium text-secondary">
         {person.firstName}
       </span>
     </div>

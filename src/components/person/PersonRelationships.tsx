@@ -23,9 +23,7 @@ interface RelationshipSectionProps {
 function RelationshipSection({ title, children }: RelationshipSectionProps) {
   return (
     <div>
-      <p className="text-sm font-semibold mb-3" style={{ color: 'var(--text-secondary)' }}>
-        {title}
-      </p>
+      <p className="text-sm font-semibold mb-3 text-secondary">{title}</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {children}
       </div>
@@ -44,10 +42,9 @@ export function PersonRelationships({ personUuid }: PersonRelationshipsProps) {
 
   return (
     <div
-      className="rounded-2xl p-5"
-      style={{ backgroundColor: 'var(--surface-card)', border: '1px solid var(--border)' }}
+      className="rounded-2xl p-5 bg-surface-card border border-border"
     >
-      <h2 className="text-xs font-semibold uppercase tracking-wider mb-4" style={{ color: 'var(--text-muted)' }}>
+      <h2 className="text-xs font-semibold uppercase tracking-wider mb-4 text-muted">
         {t('person.relationships')}
       </h2>
 
@@ -90,11 +87,11 @@ export function PersonRelationships({ personUuid }: PersonRelationshipsProps) {
         )}
 
         <div>
-          <p className="text-sm font-semibold mb-3" style={{ color: 'var(--text-secondary)' }}>
+          <p className="text-sm font-semibold mb-3 text-secondary">
             {t('person.children')} ({children.length})
           </p>
           {children.length === 0 ? (
-            <p className="text-sm italic" style={{ color: 'var(--text-muted)' }}>
+            <p className="text-sm italic text-muted">
               {t('person.noChildren')}
             </p>
           ) : (

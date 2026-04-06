@@ -7,17 +7,12 @@ export function Header() {
 
   return (
     <header
-      className="h-14 flex items-center justify-between px-4 md:px-6 shrink-0 border-b"
-      style={{
-        backgroundColor: 'var(--surface-card)',
-        borderColor: 'var(--border)',
-      }}
+      className="h-14 flex items-center justify-between px-4 md:px-6 shrink-0 border-b bg-surface-card border-border"
     >
       {/* Logo + Title */}
       <div className="flex items-center gap-2.5">
         <div
-          className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0"
-          style={{ backgroundColor: 'var(--accent)', boxShadow: '0 0 12px var(--node-shadow)' }}
+          className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 bg-accent shadow-logo"
         >
           {/* Tree icon */}
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round">
@@ -31,8 +26,7 @@ export function Header() {
           </svg>
         </div>
         <h1
-          className="text-sm font-bold tracking-tight hidden sm:block"
-          style={{ color: 'var(--text-primary)' }}
+          className="text-sm font-bold tracking-tight hidden sm:block text-primary"
         >
           {t('appTitle')}
         </h1>

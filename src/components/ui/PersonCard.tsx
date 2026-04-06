@@ -21,18 +21,17 @@ export function PersonCard({ person, subtitle, badge }: PersonCardProps) {
   return (
     <button
       key={person.uuid}
-      className="flex items-center gap-3 p-3 rounded-xl w-full text-left transition-all duration-150 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
-      style={{ backgroundColor: 'var(--surface-elevated)', border: '1px solid var(--border)' }}
+      className="flex items-center gap-3 p-3 rounded-xl w-full text-left transition-all duration-150 hover:scale-[1.02] active:scale-[0.98] cursor-pointer bg-surface-elevated border border-border"
       onClick={() => navigate(`/person/${person.uuid}`)}
     >
       <PersonAvatar person={person} size={40} />
 
       <div className="flex-1 min-w-0">
-        <p className="text-sm font-medium truncate" style={{ color: 'var(--text-primary)' }}>
+        <p className="text-sm font-medium truncate text-primary">
           {getDisplayName(person)}
         </p>
         {subtitle && (
-          <p className="text-[11px]" style={{ color: 'var(--text-muted)' }}>
+          <p className="text-[11px] text-muted">
             {subtitle}
           </p>
         )}

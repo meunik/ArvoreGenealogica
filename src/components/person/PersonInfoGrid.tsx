@@ -14,10 +14,9 @@ export function PersonInfoGrid({ person }: PersonInfoGridProps) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div
-        className="rounded-2xl p-5"
-        style={{ backgroundColor: 'var(--surface-card)', border: '1px solid var(--border)' }}
+        className="rounded-2xl p-5 bg-surface-card border border-border"
       >
-        <h2 className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: 'var(--text-muted)' }}>
+        <h2 className="text-xs font-semibold uppercase tracking-wider mb-3 text-muted">
           {t('person.details')}
         </h2>
         <InfoRow label={t('person.birthDate')} value={formatDate(person.birthDate)} icon="🎂" />
@@ -29,10 +28,9 @@ export function PersonInfoGrid({ person }: PersonInfoGridProps) {
       </div>
 
       <div
-        className="rounded-2xl p-5"
-        style={{ backgroundColor: 'var(--surface-card)', border: '1px solid var(--border)' }}
+        className="rounded-2xl p-5 bg-surface-card border border-border"
       >
-        <h2 className="text-xs font-semibold uppercase tracking-wider mb-3" style={{ color: 'var(--text-muted)' }}>
+        <h2 className="text-xs font-semibold uppercase tracking-wider mb-3 text-muted">
           {t('person.contact')}
         </h2>
         <InfoRow label={t('person.phone')} value={person.phone} fallback={t('person.noPhone')} icon="📞" />

@@ -16,58 +16,28 @@ export function PersonNode({ data }: PersonNodeProps) {
   const isDeceased = !!person.deathDate;
 
   return (
-    <div
-      className="group relative cursor-pointer select-none"
-      style={{ width: 160 }}
-      onClick={() => onSelectPerson(person.uuid)}
-    >
+    <div className="group relative cursor-pointer select-none w-40" onClick={() => onSelectPerson(person.uuid)}>
       <Handle type="target" position={Position.Top} style={{ opacity: 0 }} />
 
       <div
-        className="rounded-xl border transition-all duration-200"
-        style={{
-          backgroundColor: 'var(--node-bg)',
-          borderColor: 'var(--node-border)',
-          boxShadow: '0 2px 12px var(--node-shadow)',
-          padding: '10px',
-        }}
-        onMouseEnter={e => {
-          (e.currentTarget as HTMLDivElement).style.borderColor = 'var(--node-border-hover)';
-          (e.currentTarget as HTMLDivElement).style.boxShadow = '0 4px 20px var(--node-shadow)';
-        }}
-        onMouseLeave={e => {
-          (e.currentTarget as HTMLDivElement).style.borderColor = 'var(--node-border)';
-          (e.currentTarget as HTMLDivElement).style.boxShadow = '0 2px 12px var(--node-shadow)';
-        }}
+        className="rounded-xl border transition-all duration-200 p-2.5 bg-node-bg border-node-border shadow-node hover:border-node-border-hover hover:shadow-node-hover"
       >
         <div className="flex items-center gap-2">
           <div
-            className="rounded-full overflow-hidden shrink-0"
-            style={{
-              border: `2px solid ${isDeceased ? 'var(--text-muted)' : 'var(--accent)'}`,
-            }}
+            className={`rounded-full overflow-hidden shrink-0 border-2 ${isDeceased ? 'border-muted' : 'border-accent'}`}
           >
             <PersonAvatar person={person} size={44} />
           </div>
 
           <div className="min-w-0 flex-1">
-            <p
-              className="text-xs font-semibold truncate leading-tight"
-              style={{ color: 'var(--text-primary)' }}
-            >
+            <p className="text-xs font-semibold truncate leading-tight text-primary">
               {person.firstName}
             </p>
-            <p
-              className="text-xs truncate leading-tight"
-              style={{ color: 'var(--text-secondary)' }}
-            >
+            <p className="text-xs truncate leading-tight text-secondary">
               {person.lastName}
             </p>
             {yearsLabel && (
-              <p
-                className="text-[10px] mt-0.5 leading-tight"
-                style={{ color: 'var(--text-muted)' }}
-              >
+              <p className="text-[10px] mt-0.5 leading-tight text-muted">
                 {yearsLabel}
               </p>
             )}
@@ -75,13 +45,7 @@ export function PersonNode({ data }: PersonNodeProps) {
         </div>
 
         {isDeceased && (
-          <div
-            className="mt-1.5 text-center text-[9px] font-medium rounded px-1 py-0.5"
-            style={{
-              backgroundColor: 'var(--surface-elevated)',
-              color: 'var(--text-muted)',
-            }}
-          >
+          <div className="mt-1.5 text-center text-[9px] font-medium rounded px-1 py-0.5 bg-surface-elevated text-muted">
             ✝ {t('person.deceased')}
           </div>
         )}

@@ -27,18 +27,11 @@ export function SlideOver({ isOpen, onClose, children }: SlideOverProps) {
         ref={panelRef}
         role="dialog"
         aria-modal="true"
-        className="fixed top-0 right-0 h-full z-50 flex flex-col w-full sm:w-100 md:w-105 transition-transform duration-300 ease-in-out"
-        style={{
-          backgroundColor: 'var(--surface-card)',
-          borderLeft: '1px solid var(--border)',
-          boxShadow: '-4px 0 40px rgba(0,0,0,0.5)',
-          transform: isOpen ? 'translateX(0)' : 'translateX(100%)',
-        }}
+        className={`fixed top-0 right-0 h-full z-50 flex flex-col w-full sm:w-100 md:w-105 transition-transform duration-300 ease-in-out bg-surface-card border-l border-border shadow-panel ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
       >
         {/* Close button */}
         <button
-          className="absolute top-4 right-4 z-10 w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-150 hover:bg-surface-elevated active:scale-90"
-          style={{ color: 'var(--text-muted)' }}
+          className="absolute top-4 right-4 z-10 w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-150 hover:bg-surface-elevated active:scale-90 text-muted"
           onClick={onClose}
           aria-label="Fechar"
         >

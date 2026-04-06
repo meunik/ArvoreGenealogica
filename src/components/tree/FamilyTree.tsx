@@ -120,19 +120,7 @@ function FamilyTreeCanvas({ onSelectPerson }: FamilyTreeProps) {
           <button
             onClick={() => setShowMinimap(v => !v)}
             title={showMinimap ? 'Ocultar minimapa' : 'Mostrar minimapa'}
-            style={{
-              width: 30,
-              height: 30,
-              borderRadius: 6,
-              border: '1px solid var(--border)',
-              backgroundColor: showMinimap ? 'var(--accent)' : 'var(--surface-elevated)',
-              color: showMinimap ? '#fff' : 'var(--text-secondary)',
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              transition: 'background-color 0.15s, color 0.15s',
-            }}
+            className={`w-7.5 h-7.5 rounded-md border border-border cursor-pointer flex items-center justify-center transition-all duration-150 ${showMinimap ? 'bg-accent text-white' : 'bg-surface-elevated text-secondary'}`}
           >
             {/* Map icon (grid squares) */}
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -162,7 +150,7 @@ function FamilyTreeCanvas({ onSelectPerson }: FamilyTreeProps) {
 
 export function FamilyTree({ onSelectPerson }: FamilyTreeProps) {
   return (
-    <div className="w-full h-full" style={{ backgroundColor: 'var(--surface)' }}>
+    <div className="w-full h-full bg-surface">
       <ReactFlowProvider>
         <FamilyTreeCanvas onSelectPerson={onSelectPerson} />
       </ReactFlowProvider>

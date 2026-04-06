@@ -10,8 +10,7 @@ export function SlideOverFooter({ onViewProfile }: SlideOverFooterProps) {
 
   return (
     <div
-      className="px-5 py-4 border-t"
-      style={{ borderColor: 'var(--border)', backgroundColor: 'var(--surface-card)' }}
+      className="px-5 py-4 border-t border-border bg-surface-card"
     >
       <Button variant="primary" size="md" className="w-full" onClick={onViewProfile}>
         {t('person.viewProfile')}

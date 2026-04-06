@@ -11,8 +11,7 @@ export function LanguageToggle() {
 
   return (
     <div
-      className="flex rounded-xl overflow-hidden border"
-      style={{ borderColor: 'var(--border)' }}
+      className="flex rounded-xl overflow-hidden border border-border"
     >
       {LANGUAGES.map(lang => {
         const isActive = current === lang.code;
@@ -20,11 +19,7 @@ export function LanguageToggle() {
           <button
             key={lang.code}
             onClick={() => i18n.changeLanguage(lang.code)}
-            className="px-2.5 py-1 text-xs font-semibold transition-all duration-150 active:scale-95 cursor-pointer"
-            style={{
-              backgroundColor: isActive ? 'var(--accent)' : 'transparent',
-              color: isActive ? '#fff' : 'var(--text-muted)',
-            }}
+            className={`px-2.5 py-1 text-xs font-semibold transition-all duration-150 active:scale-95 cursor-pointer ${isActive ? 'bg-accent text-white' : 'bg-transparent text-muted'}`}
           >
             {lang.label}
           </button>

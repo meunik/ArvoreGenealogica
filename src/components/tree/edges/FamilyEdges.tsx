@@ -18,7 +18,7 @@ export function MarriageEdge(props: EdgeProps) {
     <BaseEdge
       path={edgePath}
       markerEnd={markerEnd}
-      style={{ stroke: 'var(--edge-marriage)', strokeWidth: 2 }}
+      className="stroke-edge-marriage stroke-2"
     />
   );
 }
@@ -40,7 +40,8 @@ export function CohabitationEdge(props: EdgeProps) {
     <BaseEdge
       path={edgePath}
       markerEnd={markerEnd}
-      style={{ stroke: 'var(--edge-marriage)', strokeWidth: 2, strokeDasharray: '6 3' }}
+      className="stroke-edge-marriage stroke-2"
+      style={{ strokeDasharray: '6 3' }}
     />
   );
 }
@@ -62,7 +63,7 @@ export function BloodParentalEdge(props: EdgeProps) {
     <BaseEdge
       path={edgePath}
       markerEnd={markerEnd}
-      style={{ stroke: 'var(--edge-blood)', strokeWidth: 1.5 }}
+      className="stroke-edge-blood stroke-[1.5]"
     />
   );
 }
@@ -84,7 +85,8 @@ export function AdoptiveParentalEdge(props: EdgeProps) {
     <BaseEdge
       path={edgePath}
       markerEnd={markerEnd}
-      style={{ stroke: 'var(--edge-adoptive)', strokeWidth: 1.5, strokeDasharray: '5 3' }}
+      className="stroke-edge-adoptive stroke-[1.5]"
+      style={{ strokeDasharray: '5 3' }}
     />
   );
 }
@@ -105,7 +107,8 @@ export function SeparatedEdge(props: EdgeProps) {
   return (
     <BaseEdge
       path={edgePath}
-      style={{ stroke: 'var(--edge-divorce)', strokeWidth: 1, strokeDasharray: '5 4', opacity: 0.55 }}
+      className="stroke-edge-divorce stroke-1 opacity-55"
+      style={{ strokeDasharray: '5 4' }}
     />
   );
 }

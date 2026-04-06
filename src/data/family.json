@@ -3,8 +3,8 @@
     {
       "uuid": "p-001",
       "firstName": "Maria",
-      "lastName": "",
-      "birthDate": "1948-07-25",
+      "lastName": "José",
+      "birthDate": "1949-07-25",
       "bloodType": "A+",
       "phone": "+55 21 99001-0002",
       "email": "",
@@ -16,14 +16,22 @@
     {
       "uuid": "p-002",
       "firstName": "Maria",
-      "lastName": "",
-      "birthDate": "1948-07-25",
+      "lastName": "José",
+      "birthDate": "1938-12-10",
       "bloodType": "A+",
       "phone": "+55 21 99001-0002",
       "email": "",
-      "profession": "",
+      "profession": "Costureira",
       "gender": "female",
       "avatar": { "ageGroup": "elderly", "gender": "female", "hairColor": "gray", "skinTone": "medium" }
+    },
+    {
+      "uuid": "p-013",
+      "firstName": "Pedro",
+      "lastName": "Manoel",
+      "birthDate": "1938-06-29",
+      "gender": "male",
+      "avatar": { "ageGroup": "adult", "gender": "male", "hairColor": "gray", "skinTone": "light" }
     },
 
     {
@@ -71,7 +79,7 @@
       "bloodType": "O+",
       "phone": "+55 21 99740-0790",
       "email": "luiza@email.com",
-      "profession": "Subistituta do Tabelião",
+      "profession": "Autista / Subistituta do Tabelião",
       "gender": "female",
       "avatar": { "ageGroup": "young", "gender": "female", "hairColor": "red", "skinTone": "light", "hasGlasses": true, "hasNecklace": true }
     },
@@ -84,7 +92,7 @@
       "bloodType": "A+",
       "phone": "+55 21 98739-4994",
       "email": "joao.vitor@email.com",
-      "profession": "Estudante de Matemática",
+      "profession": "Jiu-Jiteiro e Calculadora",
       "gender": "male",
       "avatar": { "ageGroup": "young", "gender": "male", "hairColor": "black", "skinTone": "medium", "hasEarrings": true }
     },
@@ -97,7 +105,7 @@
       "bloodType": "O-",
       "phone": "+55 21 99922-5133",
       "email": "luiz.castro@email.com",
-      "profession": "Vendedor",
+      "profession": "Prejudicado",
       "gender": "male",
       "avatar": { "ageGroup": "adult", "gender": "male", "hairColor": "", "skinTone": "light", "hasGlasses": true }
     },
@@ -109,7 +117,7 @@
       "bloodType": "A+",
       "phone": "+55 21 97403-7100",
       "email": "simone@email.com",
-      "profession": "Professora",
+      "profession": "Professora Autista que da aula pra autista",
       "gender": "female",
       "avatar": { "ageGroup": "adult", "gender": "female", "hairColor": "black", "skinTone": "light", "hasGlasses": true }
     },
@@ -118,9 +126,9 @@
       "uuid": "p-010",
       "firstName": "Marta",
       "lastName": "",
-      "birthDate": "1971-10-15",
-      "bloodType": "A+",
-      "phone": "+55 21 90000-0000",
+      "birthDate": "1970-09-28",
+      "bloodType": "O+",
+      "phone": "+55 21 96475-0874",
       "email": "marta@email.com",
       "profession": "",
       "gender": "female",
@@ -130,9 +138,9 @@
       "uuid": "p-011",
       "firstName": "Mariana",
       "lastName": "",
-      "birthDate": "1997-03-17",
-      "bloodType": "A+",
-      "phone": "+55 21 90000-0000",
+      "birthDate": "1998-03-17",
+      "bloodType": "",
+      "phone": "+55 21 98470-5390",
       "email": "mariana@email.com",
       "profession": "Cientista",
       "gender": "female",
@@ -142,11 +150,11 @@
       "uuid": "p-012",
       "firstName": "Maria",
       "lastName": "Clara",
-      "birthDate": "2003-10-15",
-      "bloodType": "A+",
-      "phone": "+55 21 90000-0000",
+      "birthDate": "2003-10-30",
+      "bloodType": "",
+      "phone": "+55 21 96473-5056",
       "email": "maria.clara@email.com",
-      "profession": "Estudante de Artes",
+      "profession": "Estudante de Artes = Vagabundo",
       "gender": "female",
       "avatar": { "ageGroup": "adult", "gender": "female", "hairColor": "black", "skinTone": "light" }
     }
@@ -168,7 +176,7 @@
       "partner2Uuid": "p-007",
       "status": "married",
       "relationshipType": "marriage",
-      "startDate": "2022-06-29"
+      "startDate": "2018-06-29"
     },
     {
       "uuid": "c-003",
@@ -176,7 +184,15 @@
       "partner2Uuid": "p-009",
       "status": "married",
       "relationshipType": "marriage",
-      "startDate": "2001-06-15"
+      "startDate": "1996-02-14"
+    },
+    {
+      "uuid": "c-004",
+      "partner1Uuid": "p-002",
+      "partner2Uuid": "p-013",
+      "status": "married",
+      "relationshipType": "marriage",
+      "startDate": ""
     }
   ],
 
@@ -191,6 +207,14 @@
       "uuid": "pr-002",
       "parentUuid": "p-002",
       "childUuid": "p-004",
+      "conjugalRelationshipUuid": "c-004",
+      "type": "biological"
+    },
+    {
+      "uuid": "pr-013",
+      "parentUuid": "p-013",
+      "childUuid": "p-004",
+      "conjugalRelationshipUuid": "c-004",
       "type": "biological"
     },
     
@@ -242,6 +266,14 @@
       "uuid": "pr-009",
       "parentUuid": "p-002",
       "childUuid": "p-010",
+      "conjugalRelationshipUuid": "c-004",
+      "type": "biological"
+    },
+    {
+      "uuid": "pr-012",
+      "parentUuid": "p-013",
+      "childUuid": "p-010",
+      "conjugalRelationshipUuid": "c-004",
       "type": "biological"
     },
 

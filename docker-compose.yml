@@ -1,0 +1,7 @@
+services:
+  arvore-genealogica:
+    build: .
+    container_name: arvore-genealogica
+    ports:
+      - "9020:9020"
+    restart: unless-stopped

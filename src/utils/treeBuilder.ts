@@ -104,9 +104,9 @@ export function buildFamilyGraph(data: FamilyData): { nodes: FamilyNode[]; edges
       id: `c-${cr.uuid}`,
       type: 'coupleNode',
       position: { x: 0, y: 0 },
-      // Childless active couples: hidden technical node (keeps Dagre layout correct)
+      // Childless active couples: hidden visual-only node — NOT fed to Dagre
       hidden: isChildless,
-      data: { ...coupleNodeData, layoutInclude: isChildless },
+      data: { ...coupleNodeData, layoutInclude: false },
     });
 
     const edgeType = cr.relationshipType === 'cohabitation' ? 'cohabitationEdge' : 'marriageEdge';
@@ -116,9 +116,10 @@ export function buildFamilyGraph(data: FamilyData): { nodes: FamilyNode[]; edges
       edges.push({ id: `e-p1-${cr.uuid}`, source: `p-${cr.partner1Uuid}`, target: `c-${cr.uuid}`, type: edgeType, data: { relationship: cr } });
       edges.push({ id: `e-p2-${cr.uuid}`, source: `p-${cr.partner2Uuid}`, target: `c-${cr.uuid}`, type: edgeType, data: { relationship: cr } });
     } else if (isActive && isChildless) {
-      // Childless couple: hidden technical edges (for Dagre layout) + one direct visual edge
-      edges.push({ id: `e-p1-${cr.uuid}`, source: `p-${cr.partner1Uuid}`, target: `c-${cr.uuid}`, type: edgeType, hidden: true, data: { relationship: cr, layoutInclude: true } });
-      edges.push({ id: `e-p2-${cr.uuid}`, source: `p-${cr.partner2Uuid}`, target: `c-${cr.uuid}`, type: edgeType, hidden: true, data: { relationship: cr, layoutInclude: true } });
+      // Childless couple: purely visual — NOT fed to Dagre (no layoutInclude)
+      // The layout engine will snap them together in post-layout.
+      edges.push({ id: `e-p1-${cr.uuid}`, source: `p-${cr.partner1Uuid}`, target: `c-${cr.uuid}`, type: edgeType, hidden: true, data: { relationship: cr, visualOnly: true } });
+      edges.push({ id: `e-p2-${cr.uuid}`, source: `p-${cr.partner2Uuid}`, target: `c-${cr.uuid}`, type: edgeType, hidden: true, data: { relationship: cr, visualOnly: true } });
       // One direct visual-only edge between the two persons
       edges.push({ id: `e-direct-${cr.uuid}`, source: `p-${cr.partner1Uuid}`, target: `p-${cr.partner2Uuid}`, type: edgeType, sourceHandle: 'couple-out', targetHandle: 'couple-in', data: { relationship: cr, visualOnly: true } });
     } else if (isSeparated) {

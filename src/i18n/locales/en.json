@@ -1,0 +1,70 @@
+{
+  "appTitle": "Family Tree",
+  "theme": {
+    "toggleDark": "Switch to dark mode",
+    "toggleLight": "Switch to light mode"
+  },
+  "language": {
+    "pt": "Português",
+    "en": "English"
+  },
+  "tree": {
+    "expand": "Expand branch",
+    "collapse": "Collapse branch",
+    "fitView": "Fit to screen",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out",
+    "noData": "No members found"
+  },
+  "person": {
+    "name": "Name",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "birthDate": "Date of Birth",
+    "deathDate": "Date of Death",
+    "age": "Age",
+    "bloodType": "Blood Type",
+    "phone": "Phone",
+    "email": "Email",
+    "profession": "Profession",
+    "children": "Children",
+    "childrenCount": "{{count}} child",
+    "childrenCount_plural": "{{count}} children",
+    "noChildren": "No children registered",
+    "alive": "Alive",
+    "deceased": "Deceased",
+    "viewProfile": "View full profile",
+    "backToTree": "Back to tree",
+    "details": "Details",
+    "relationships": "Relationships",
+    "parents": "Parents",
+    "spouse": "Spouse",
+    "exSpouse": "Ex-spouse",
+    "noPhone": "Not provided",
+    "noEmail": "Not provided",
+    "noProfession": "Not provided",
+    "noBloodType": "Not provided"
+  },
+  "relationship": {
+    "biological": "Biological",
+    "adoptive": "Adoptive",
+    "stepparent": "Stepparent",
+    "foster": "Foster",
+    "married": "Married",
+    "cohabiting": "Cohabiting",
+    "divorced": "Divorced",
+    "widowed": "Widowed",
+    "marriage": "Marriage",
+    "civil_union": "Civil union",
+    "cohabitation": "Cohabitation"
+  },
+  "gender": {
+    "male": "Male",
+    "female": "Female",
+    "other": "Other"
+  },
+  "errors": {
+    "personNotFound": "Person not found",
+    "personNotFoundDesc": "The member with the given ID does not exist in the family."
+  }
+}

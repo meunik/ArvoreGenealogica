@@ -1,0 +1,70 @@
+{
+  "appTitle": "Árvore Genealógica",
+  "theme": {
+    "toggleDark": "Alternar para modo escuro",
+    "toggleLight": "Alternar para modo claro"
+  },
+  "language": {
+    "pt": "Português",
+    "en": "English"
+  },
+  "tree": {
+    "expand": "Expandir ramo",
+    "collapse": "Colapsar ramo",
+    "fitView": "Ajustar à tela",
+    "zoomIn": "Ampliar",
+    "zoomOut": "Reduzir",
+    "noData": "Nenhum membro encontrado"
+  },
+  "person": {
+    "name": "Nome",
+    "firstName": "Nome",
+    "lastName": "Sobrenome",
+    "birthDate": "Data de Nascimento",
+    "deathDate": "Data de Falecimento",
+    "age": "Idade",
+    "bloodType": "Tipo Sanguíneo",
+    "phone": "Telefone",
+    "email": "E-mail",
+    "profession": "Profissão",
+    "children": "Filhos",
+    "childrenCount": "{{count}} filho",
+    "childrenCount_plural": "{{count}} filhos",
+    "noChildren": "Sem filhos registrados",
+    "alive": "Vivo(a)",
+    "deceased": "Falecido(a)",
+    "viewProfile": "Ver perfil completo",
+    "backToTree": "Voltar à árvore",
+    "details": "Detalhes",
+    "relationships": "Relacionamentos",
+    "parents": "Pais",
+    "spouse": "Cônjuge",
+    "exSpouse": "Ex-cônjuge",
+    "noPhone": "Não informado",
+    "noEmail": "Não informado",
+    "noProfession": "Não informada",
+    "noBloodType": "Não informado"
+  },
+  "relationship": {
+    "biological": "Biológico(a)",
+    "adoptive": "Adotivo(a)",
+    "stepparent": "Padrasto/Madrasta",
+    "foster": "Guardião(ã)",
+    "married": "Casado(a)",
+    "cohabiting": "União estável",
+    "divorced": "Divorciado(a)",
+    "widowed": "Viúvo(a)",
+    "marriage": "Casamento",
+    "civil_union": "União civil",
+    "cohabitation": "Coabitação"
+  },
+  "gender": {
+    "male": "Masculino",
+    "female": "Feminino",
+    "other": "Outro"
+  },
+  "errors": {
+    "personNotFound": "Pessoa não encontrada",
+    "personNotFoundDesc": "O membro com o ID informado não existe na família."
+  }
+}

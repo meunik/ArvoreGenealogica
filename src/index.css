@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+/* Dark mode via classe .light no <html> (dark é o padrão) */
+@custom-variant light (&:where(.light, .light *));
+
+/* ─── Tokens de Cor (Dark — padrão) ────────────────────────── */
+:root {
+  --surface:          #0d0d0d;
+  --surface-card:     #1a1a1a;
+  --surface-elevated: #222222;
+  --surface-overlay:  #2a2a2a;
+  --border:           #2a2a2a;
+  --border-subtle:    #1e1e1e;
+  --text-primary:     #f0f0f0;
+  --text-secondary:   #cccccc;
+  --text-muted:       #8a8a8a;
+  --accent:           #e91e8c;
+  --accent-hover:     #c4167a;
+  --accent-subtle:    #3d0a22;
+  --accent-text:      #f8b4d9;
+  --success:          #22c55e;
+  --warning:          #f59e0b;
+  --danger:           #ef4444;
+  --info:             #3b82f6;
+  --edge-blood:       #e91e8c;
+  --edge-adoptive:    #a78bfa;
+  --edge-marriage:    #f0f0f0;
+  --edge-divorce:     #555555;
+  --node-bg:          #1a1a1a;
+  --node-border:      #2a2a2a;
+  --node-border-hover:#e91e8c;
+  --node-shadow:      rgba(233, 30, 140, 0.18);
+}
+
+/* ─── Tokens de Cor (Light) ─────────────────────────────────── */
+html.light {
+  --surface:          #f5f5f5;
+  --surface-card:     #ffffff;
+  --surface-elevated: #ebebeb;
+  --surface-overlay:  #e0e0e0;
+  --border:           #e0e0e0;
+  --border-subtle:    #f0f0f0;
+  --text-primary:     #111111;
+  --text-secondary:   #444444;
+  --text-muted:       #666666;
+  --accent:           #e91e8c;
+  --accent-hover:     #c4167a;
+  --accent-subtle:    #ffe0f0;
+  --accent-text:      #9d1060;
+  --success:          #16a34a;
+  --warning:          #d97706;
+  --danger:           #dc2626;
+  --info:             #2563eb;
+  --edge-blood:       #e91e8c;
+  --edge-adoptive:    #7c3aed;
+  --edge-marriage:    #333333;
+  --edge-divorce:     #aaaaaa;
+  --node-bg:          #ffffff;
+  --node-border:      #e0e0e0;
+  --node-border-hover:#e91e8c;
+  --node-shadow:      rgba(233, 30, 140, 0.12);
+}
+
+/* ─── Mapeamento Tailwind v4 ────────────────────────────────── */
+@theme inline {
+  --color-surface:          var(--surface);
+  --color-surface-card:     var(--surface-card);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-surface-overlay:  var(--surface-overlay);
+  --color-border:           var(--border);
+  --color-border-subtle:    var(--border-subtle);
+  --color-text-primary:     var(--text-primary);
+  --color-text-secondary:   var(--text-secondary);
+  --color-text-muted:       var(--text-muted);
+  --color-accent:           var(--accent);
+  --color-accent-hover:     var(--accent-hover);
+  --color-accent-subtle:    var(--accent-subtle);
+  --color-accent-text:      var(--accent-text);
+  --color-success:          var(--success);
+  --color-warning:          var(--warning);
+  --color-danger:           var(--danger);
+  --color-info:             var(--info);
+  --color-node-bg:          var(--node-bg);
+  --color-node-border:      var(--node-border);
+  --color-node-border-hover:var(--node-border-hover);
+  --color-edge-blood:       var(--edge-blood);
+  --color-edge-adoptive:    var(--edge-adoptive);
+  --color-edge-marriage:    var(--edge-marriage);
+  --color-edge-divorce:     var(--edge-divorce);
+}
+
+/* ─── Base ──────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--surface);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Scrollbar customizada ─────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: var(--surface-overlay); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* ─── React Flow overrides ──────────────────────────────────── */
+.react-flow__background {
+  background-color: var(--surface) !important;
+}
+
+.react-flow__controls {
+  background-color: var(--surface-card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+}
+
+.react-flow__controls-button {
+  background-color: var(--surface-card) !important;
+  border-bottom: 1px solid var(--border) !important;
+  fill: var(--text-muted) !important;
+  transition: background-color 0.15s, fill 0.15s;
+}
+
+.react-flow__controls-button:hover {
+  background-color: var(--surface-elevated) !important;
+  fill: var(--accent) !important;
+}
+
+.react-flow__minimap {
+  background-color: var(--surface-card) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+}
+
+.react-flow__minimap-mask {
+  fill: var(--surface-overlay) !important;
+  fill-opacity: 0.7 !important;
+}
+
+.react-flow__node:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+

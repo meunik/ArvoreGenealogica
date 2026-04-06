@@ -1,0 +1,260 @@
+{
+  "persons": [
+    {
+      "uuid": "p-001",
+      "firstName": "Maria",
+      "lastName": "",
+      "birthDate": "1948-07-25",
+      "bloodType": "A+",
+      "phone": "+55 21 99001-0002",
+      "email": "",
+      "profession": "Vó",
+      "gender": "female",
+      "avatar": { "ageGroup": "elderly", "gender": "female", "hairColor": "gray", "skinTone": "medium-light" }
+    },
+
+    {
+      "uuid": "p-002",
+      "firstName": "Maria",
+      "lastName": "",
+      "birthDate": "1948-07-25",
+      "bloodType": "A+",
+      "phone": "+55 21 99001-0002",
+      "email": "",
+      "profession": "",
+      "gender": "female",
+      "avatar": { "ageGroup": "elderly", "gender": "female", "hairColor": "gray", "skinTone": "medium" }
+    },
+
+    {
+      "uuid": "p-003",
+      "firstName": "José",
+      "lastName": "Joabio",
+      "birthDate": "1972-08-02",
+      "bloodType": "A+",
+      "phone": "+55 21 97586-7146",
+      "email": "jose.joabio@email.com",
+      "profession": "Máquina de matar da mirinha",
+      "gender": "male",
+      "avatar": { "ageGroup": "adult", "gender": "male", "hairColor": "black", "skinTone": "light" }
+    },
+    {
+      "uuid": "p-004",
+      "firstName": "Valéria",
+      "lastName": "Oliveira",
+      "birthDate": "1966-08-31",
+      "bloodType": "A+",
+      "phone": "+55 21 99493-1657",
+      "email": "valeria.oliveira@email.com",
+      "profession": "Escrevente",
+      "gender": "female",
+      "avatar": { "ageGroup": "adult", "gender": "female", "hairColor": "black", "skinTone": "medium", "hasGlasses": true }
+    },
+
+    {
+      "uuid": "p-005",
+      "firstName": "Marcos",
+      "lastName": "Paulo",
+      "birthDate": "1995-08-24",
+      "bloodType": "A+",
+      "phone": "+55 21 97632-1564",
+      "email": "meunik@live.com",
+      "profession": "Engenheiro de Software",
+      "gender": "male",
+      "avatar": { "ageGroup": "adult", "gender": "male", "hairColor": "black", "skinTone": "light" }
+    },
+    {
+      "uuid": "p-007",
+      "firstName": "Luiza",
+      "lastName": "",
+      "birthDate": "1997-01-18",
+      "bloodType": "O+",
+      "phone": "+55 21 99740-0790",
+      "email": "luiza@email.com",
+      "profession": "Subistituta do Tabelião",
+      "gender": "female",
+      "avatar": { "ageGroup": "young", "gender": "female", "hairColor": "red", "skinTone": "light", "hasGlasses": true, "hasNecklace": true }
+    },
+
+    {
+      "uuid": "p-006",
+      "firstName": "João",
+      "lastName": "Vitor",
+      "birthDate": "2002-12-16",
+      "bloodType": "A+",
+      "phone": "+55 21 98739-4994",
+      "email": "joao.vitor@email.com",
+      "profession": "Estudante de Matemática",
+      "gender": "male",
+      "avatar": { "ageGroup": "young", "gender": "male", "hairColor": "black", "skinTone": "medium", "hasEarrings": true }
+    },
+
+    {
+      "uuid": "p-008",
+      "firstName": "Luiz",
+      "lastName": "Castro",
+      "birthDate": "1972-07-02",
+      "bloodType": "O-",
+      "phone": "+55 21 99922-5133",
+      "email": "luiz.castro@email.com",
+      "profession": "Vendedor",
+      "gender": "male",
+      "avatar": { "ageGroup": "adult", "gender": "male", "hairColor": "", "skinTone": "light", "hasGlasses": true }
+    },
+    {
+      "uuid": "p-009",
+      "firstName": "Simone",
+      "lastName": "",
+      "birthDate": "1971-10-15",
+      "bloodType": "A+",
+      "phone": "+55 21 97403-7100",
+      "email": "simone@email.com",
+      "profession": "Professora",
+      "gender": "female",
+      "avatar": { "ageGroup": "adult", "gender": "female", "hairColor": "black", "skinTone": "light", "hasGlasses": true }
+    },
+
+    {
+      "uuid": "p-010",
+      "firstName": "Marta",
+      "lastName": "",
+      "birthDate": "1971-10-15",
+      "bloodType": "A+",
+      "phone": "+55 21 90000-0000",
+      "email": "marta@email.com",
+      "profession": "",
+      "gender": "female",
+      "avatar": { "ageGroup": "adult", "gender": "female", "hairColor": "black", "skinTone": "light", "hasGlasses": true }
+    },
+    {
+      "uuid": "p-011",
+      "firstName": "Mariana",
+      "lastName": "",
+      "birthDate": "1997-03-17",
+      "bloodType": "A+",
+      "phone": "+55 21 90000-0000",
+      "email": "mariana@email.com",
+      "profession": "Cientista",
+      "gender": "female",
+      "avatar": { "ageGroup": "adult", "gender": "female", "hairColor": "black", "skinTone": "medium", "hasGlasses": true }
+    },
+    {
+      "uuid": "p-012",
+      "firstName": "Maria",
+      "lastName": "Clara",
+      "birthDate": "2003-10-15",
+      "bloodType": "A+",
+      "phone": "+55 21 90000-0000",
+      "email": "maria.clara@email.com",
+      "profession": "Estudante de Artes",
+      "gender": "female",
+      "avatar": { "ageGroup": "adult", "gender": "female", "hairColor": "black", "skinTone": "light" }
+    }
+  ],
+
+  "conjugalRelationships": [
+    {
+      "uuid": "c-001",
+      "partner1Uuid": "p-003",
+      "partner2Uuid": "p-004",
+      "status": "married",
+      "relationshipType": "marriage",
+      "startDate": "1997-12-01"
+    },
+    {
+      "uuid": "c-002",
+      "partner1Uuid": "p-005",
+      "partner2Uuid": "p-007",
+      "status": "married",
+      "relationshipType": "marriage",
+      "startDate": "2022-06-29"
+    },
+    {
+      "uuid": "c-003",
+      "partner1Uuid": "p-008",
+      "partner2Uuid": "p-009",
+      "status": "married",
+      "relationshipType": "marriage",
+      "startDate": "2001-06-15"
+    }
+  ],
+
+  "parentalRelationships": [
+    {
+      "uuid": "pr-001",
+      "parentUuid": "p-001",
+      "childUuid": "p-003",
+      "type": "biological"
+    },
+    {
+      "uuid": "pr-002",
+      "parentUuid": "p-002",
+      "childUuid": "p-004",
+      "type": "biological"
+    },
+    
+    {
+      "uuid": "pr-003",
+      "parentUuid": "p-003",
+      "childUuid": "p-005",
+      "conjugalRelationshipUuid": "c-001",
+      "type": "biological"
+    },
+    {
+      "uuid": "pr-004",
+      "parentUuid": "p-004",
+      "childUuid": "p-005",
+      "conjugalRelationshipUuid": "c-001",
+      "type": "biological"
+    },
+    {
+      "uuid": "pr-005",
+      "parentUuid": "p-003",
+      "childUuid": "p-006",
+      "conjugalRelationshipUuid": "c-001",
+      "type": "biological"
+    },
+    {
+      "uuid": "pr-006",
+      "parentUuid": "p-004",
+      "childUuid": "p-006",
+      "conjugalRelationshipUuid": "c-001",
+      "type": "biological"
+    },
+
+    {
+      "uuid": "pr-007",
+      "parentUuid": "p-008",
+      "childUuid": "p-007",
+      "conjugalRelationshipUuid": "c-003",
+      "type": "biological"
+    },
+    {
+      "uuid": "pr-008",
+      "parentUuid": "p-009",
+      "childUuid": "p-007",
+      "conjugalRelationshipUuid": "c-003",
+      "type": "biological"
+    },
+
+    {
+      "uuid": "pr-009",
+      "parentUuid": "p-002",
+      "childUuid": "p-010",
+      "type": "biological"
+    },
+
+    {
+      "uuid": "pr-010",
+      "parentUuid": "p-010",
+      "childUuid": "p-011",
+      "type": "biological"
+    },
+    {
+      "uuid": "pr-011",
+      "parentUuid": "p-010",
+      "childUuid": "p-012",
+      "type": "biological"
+    }
+  ]
+}

@@ -37,8 +37,7 @@ export function SlideOver({ isOpen, onClose, children }: SlideOverProps) {
       >
         {/* Close button */}
         <button
-          className="absolute top-4 right-4 z-10 w-8 h-8 rounded-lg flex items-center justify-center
-                     transition-all duration-150 hover:bg-surface-elevated active:scale-90"
+          className="absolute top-4 right-4 z-10 w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-150 hover:bg-surface-elevated active:scale-90"
           style={{ color: 'var(--text-muted)' }}
           onClick={onClose}
           aria-label="Fechar"

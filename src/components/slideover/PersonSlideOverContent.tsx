@@ -23,11 +23,12 @@ const PARENTAL_BADGE: Record<ParentalRelationship['type'], NonNullable<React.Com
 export function PersonSlideOverContent({ person, onClose }: PersonSlideOverContentProps) {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const { getChildrenOf, getParentsOf, getSpousesOf } = useFamilyData();
+  const { getChildrenOf, getParentsOf, getSpousesOf, getSiblingsOf } = useFamilyData();
 
   const children = getChildrenOf(person.uuid);
   const parents = getParentsOf(person.uuid);
   const spouses = getSpousesOf(person.uuid);
+  const siblings = getSiblingsOf(person.uuid);
   const age = calcAge(person.birthDate, person.deathDate);
   const isDeceased = !!person.deathDate;
 
@@ -157,12 +158,35 @@ export function PersonSlideOverContent({ person, onClose }: PersonSlideOverConte
           </section>
         )}
 
+        {/* Irmãos */}
+        {siblings.length > 0 && (
+          <section>
+            <h3
+              className="text-xs font-semibold uppercase tracking-wider mb-2"
+              style={{ color: 'var(--text-muted)' }}
+            >
+              {t('person.siblings')} ({siblings.length})
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {siblings.map(sibling => (
+                <div
+                  key={sibling.uuid}
+                  className="flex items-center gap-2 px-2.5 py-1.5 rounded-xl"
+                  style={{ backgroundColor: 'var(--surface-elevated)' }}
+                >
+                  <PersonAvatar person={sibling} size={24} />
+                  <span className="text-xs font-medium" style={{ color: 'var(--text-secondary)' }}>
+                    {sibling.firstName}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
         {/* Filhos */}
         <section>
-          <h3
-            className="text-xs font-semibold uppercase tracking-wider mb-2"
-            style={{ color: 'var(--text-muted)' }}
-          >
+          <h3 className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: 'var(--text-muted)' }}>
             {t('person.children')} ({children.length})
           </h3>
           {children.length === 0 ? (
